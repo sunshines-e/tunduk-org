@@ -5,7 +5,8 @@
   <title>Открытие PDF...</title>
   <script>
     const pdfMap = {
-      "66anpy1f2r2ohmjzirj9tb7jrvo75jue": "https://ВАШ_ЮЗЕР.github.io/tunduk-org/moyfile.pdf"
+      "66anpy1f2r2ohmjzirj9tb7jrvo75jue.pdf": "https://zharkynaiomurbekova01-max.github.io/tunduk-org/yourfile.pdf"
+      // вы можете добавить дополнительные ID и ссылки сюда
     };
 
     const id = window.location.pathname.replace(/^\/+|\/+$/g, '');
@@ -13,7 +14,7 @@
       window.location.replace(pdfMap[id]);
     } else {
       document.addEventListener('DOMContentLoaded', () => {
-        document.body.innerHTML = '<h2>Документ не найден</h2>';
+        document.body.innerHTML = '<h2>Документ не найден</h2><p>Проверьте правильность ссылки.</p>';
       });
     }
   </script>
