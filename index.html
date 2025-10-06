@@ -1,24 +1,23 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="utf-8">
+  <meta charset="utf-8" />
   <title>Открытие PDF...</title>
   <script>
     const pdfMap = {
-      "66anpy1f2r2ohmjzirj9tb7jrvo75jue.pdf": "https://zharkynaiomurbekova01-max/tunduk/66anpy1f2r2ohmjzirj9tb7jrvo75jue.pdf"
-      // вы можете добавить дополнительные ID и ссылки сюда
+      "66anpy1f2r2ohmjzirj9tb7jrvo75jue": "https://zharkynaiomurbekova01-max.github.io/tunduk-org/66anpy1f2r2ohmjzirj9tb7jrvo75jue.pdf"
     };
 
     const id = window.location.pathname.replace(/^\/+|\/+$/g, '');
+
     if (pdfMap[id]) {
       window.location.replace(pdfMap[id]);
     } else {
       document.addEventListener('DOMContentLoaded', () => {
-        document.body.innerHTML = '<h2>Документ не найден</h2><p>Проверьте правильность ссылки.</p>';
+        document.body.innerHTML = "<h2>Документ не найден</h2>";
       });
     }
   </script>
 </head>
-<body>
-</body>
+<body></body>
 </html>
