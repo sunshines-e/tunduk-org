@@ -2,15 +2,18 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>Открытие PDF…</title>
+  <title>Открытие PDF...</title>
   <script>
+    const pdfMap = {
+      "66anpy1f2r2ohmjzirj9tb7jrvo75jue": "https://ВАШ_ЮЗЕР.github.io/tunduk-org/moyfile.pdf"
+    };
+
     const id = window.location.pathname.replace(/^\/+|\/+$/g, '');
-    if (id && /^[a-z0-9]{10,}$/i.test(id)) {
-      const pdfUrl = `https://fs.tunduk.online/f/${id}.pdf`;
-      window.location.replace(pdfUrl);
+    if (pdfMap[id]) {
+      window.location.replace(pdfMap[id]);
     } else {
       document.addEventListener('DOMContentLoaded', () => {
-        document.body.innerHTML = '<p>Некорректная ссылка. Убедитесь, что ID указан верно.</p>';
+        document.body.innerHTML = '<h2>Документ не найден</h2>';
       });
     }
   </script>
